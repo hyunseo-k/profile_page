@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/profile_pages/static/js/main.17dacca5.js",
-    "index.html": "/profile_pages/index.html",
-    "main.17dacca5.js.map": "/profile_pages/static/js/main.17dacca5.js.map"
+    "main.js": "/profile_page/static/js/main.17dacca5.js",
+    "index.html": "/profile_page/index.html",
+    "main.17dacca5.js.map": "/profile_page/static/js/main.17dacca5.js.map"
   },
   "entrypoints": [
     "static/js/main.17dacca5.js"
