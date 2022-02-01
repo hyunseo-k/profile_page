@@ -1,10 +1,10 @@
 .movie {
-  background-color: #efeff1;
+  background-color: #ccdbe2;
   margin-bottom: 70px;
   font-weight: 300;
   padding: 20px;
   border-radius: 5px;
-  color: #ecd4d4;
+  color: #b97687;
   display: grid;
   grid-template-columns: minmax(150px, 1fr) 2fr;
   grid-gap: 20px;

@@ -8,7 +8,7 @@ function Movie({ coverImg, title, summary, genres, id }) {
       <div className={styles.movie}>
         <img src={coverImg} alt={title}></img>
         <div>
-          <h2 className={styles.movie__title}>
+          <h2 style={{ fontFamily: "fantasy" }} className={styles.movie__title}>
             <Link to={`/movie/${id}`}>{title}</Link>
           </h2>
           <p>

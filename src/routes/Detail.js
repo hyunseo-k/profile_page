@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
+import styles from "./Detail.module.css";
+import Badge from "react-bootstrap/Badge";
 
 function Detail() {
   const [loading, setLoading] = useState(true);
@@ -19,15 +21,35 @@ function Detail() {
   return (
     <div>
       {loading ? (
-        <h1>LOADING...</h1>
+        <h1 className={styles.loader}>Loading...</h1>
       ) : (
-        <div>
+        <div className={styles.section}>
           <img src={movie.large_cover_image} alt={movie.title} />
-          <h2>{movie.title}</h2>
-          <h3>Download count: {movie.download_count}</h3>
-          <h3>Like count: {movie.like_count}</h3>
-          <h3>Rating: {movie.rating}</h3>
-          <h3>Runtime: {movie.runtime}</h3>
+          <h2 style={{ fontFamily: "fantasy" }}>{movie.title}</h2>
+          <p>
+            <Badge pill bg="danger">
+              Rating
+            </Badge>
+            {` ${movie.rating}`}
+          </p>
+          <p>
+            <Badge pill bg="info">
+              Download count
+            </Badge>
+            {` ${movie.download_count}`}
+          </p>
+          <p>
+            <Badge pill bg="primary">
+              Like count
+            </Badge>
+            {` ${movie.like_count}`}
+          </p>
+          <p>
+            <Badge pill bg="warning">
+              Runtime
+            </Badge>
+            {` ${movie.runtime}`}
+          </p>
           <p>{movie.description_full}</p>
           <ul>
             {movie.genres && movie.genres.map((g) => <li key={g}>{g}</li>)}
